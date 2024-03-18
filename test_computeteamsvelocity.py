@@ -9,7 +9,7 @@ class TestComputeTeamsVelocity(unittest.TestCase):
     def test_positive_case(self, mock_input):
         with patch('builtins.print') as mock_print:
             compute_team_velocity()
-            mock_print.assert_called_with("\nAverage team velocity over 3 sprints is: 20.00")
+            mock_print.assert_called_with("\nAverage team velocity over 3 sprints is: 20.00(Happy Path)")
 
     @patch('builtins.input', side_effect=['2', '15', '-5'])
     def test_negative_sprint_points(self, mock_input):
